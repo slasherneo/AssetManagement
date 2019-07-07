@@ -13,8 +13,6 @@ using System.Threading.Tasks;
 namespace AssetManagement.Api.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
-    [Produces("application/json")]
     public class ReleaseAssertController : ControllerBase
     {
         private readonly ILogger<ReleaseAssertController> _logger;
@@ -27,10 +25,15 @@ namespace AssetManagement.Api.Controllers
             _service = service;
             _baseFolder = configuration["TempFolder"];
         }
-   
+
+        /// <summary>
+        /// 使用SampleConvert上傳圖片
+        /// </summary>
+        /// <param name="request">上傳資料(File)</param>
+        /// <returns></returns>
         [HttpPost("[action]")]
         [ProducesResponseType(typeof(ResponseBase), 200)]
-        public async Task<ResponseBase> ReleaseGraphicAsyncSampleConvterAsync([FromBody]ReleaseGraphicRequest request)
+        public async Task<ResponseBase> ReleaseGraphicAsyncSampleConvterAsync(ReleaseGraphicRequest request)
         {
             string strTag = "ReleaseGrapic";
             var guid = HttpContext.Items["x-guid"];
@@ -64,9 +67,14 @@ namespace AssetManagement.Api.Controllers
             return result;
         }
 
+        /// <summary>
+        /// 使用SampleConvert上傳影片
+        /// </summary>
+        /// <param name="request">上傳資料(File)</param>
+        /// <returns></returns>
         [HttpPost("[action]")]
         [ProducesResponseType(typeof(ResponseBase), 200)]
-        public async Task<ResponseBase> ReleaseVedioAsyncSampleConvter([FromBody]ReleaseVedioRequest request)
+        public async Task<ResponseBase> ReleaseVedioAsyncSampleConvter(ReleaseVedioRequest request)
         {
             string strTag = "ReleaseVedio";
             var guid = HttpContext.Items["x-guid"];

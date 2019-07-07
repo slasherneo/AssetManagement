@@ -53,7 +53,6 @@ namespace AssetManagement.Api
                             }
                     }
                 );
-                c.OperationFilter<FileUploadOperation>();
                 var filePath = Path.Combine (PlatformServices.Default.Application.ApplicationBasePath, "Api.xml");
                 c.IncludeXmlComments (filePath);
             });
