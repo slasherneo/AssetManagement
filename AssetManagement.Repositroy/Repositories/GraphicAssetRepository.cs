@@ -52,7 +52,7 @@ namespace AssetManagement.Repository.Interfaces
             var updateGraphic = context.FirstOrDefault(x => x.Id == graphic.Id);
             if (updateGraphic != default(GraphicAsset))
             {
-                updateGraphic.IsAvailable = false;
+                updateGraphic.AssetInfo.IsAvailable = false;
             }
         }
     }

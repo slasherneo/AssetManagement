@@ -5,8 +5,10 @@ using AssetManagement.Object.Assets;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using System;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -17,13 +19,17 @@ namespace AssetManagement.Api.Controllers
     {
         private readonly ILogger<ReleaseAssertController> _logger;
         private readonly IReleaseAssetsProcess _service;
-        private string   _baseFolder="/temp";
+        private readonly IConfiguration _configuration;
+        private readonly IHostingEnvironment _env;
+        private string   _baseFolder="temp";
 
-        public ReleaseAssertController(ILogger<ReleaseAssertController> logger, IReleaseAssetsProcess service, IConfiguration configuration)
+        public ReleaseAssertController(ILogger<ReleaseAssertController> logger, IReleaseAssetsProcess service, IConfiguration configuration, IHostingEnvironment env)
         {
             _logger = logger;
             _service = service;
-            _baseFolder = configuration["TempFolder"];
+            _configuration = configuration;
+            _env = env;
+            _baseFolder = Path.Combine(env.ContentRootPath, configuration["TempFolder"]);
         }
 
         /// <summary>
@@ -42,13 +48,16 @@ namespace AssetManagement.Api.Controllers
             _logger.LogInformation($"[{guid}] {strTag} Request : name= {request.Name}");
 
             var filePath = Path.Combine(_baseFolder, $"{guid.ToString()}.temp");
-            using (var stream = new FileStream(filePath, FileMode.Create))
+            using (var stream = new FileStream(filePath, FileMode.OpenOrCreate))
             {
                 await request.Grapic.CopyToAsync(stream);
             }
 
-            var serviceRequest = Mapper.Map<GraphicAsset>(request);
-            var converter = new SimpleResulotionConverter();
+            var serviceMetadata = Mapper.Map<AssetMetadata>(request);
+            var serviceRequest = new GraphicAsset() { AssetInfo = serviceMetadata };
+            serviceRequest.SourceFilePath = filePath;
+            serviceRequest.UploadTime = DateTime.Now;
+            var converter = new SimpleResulotionConverter(_configuration, _env);
 
             var result = new ResponseBase();
 
@@ -83,13 +92,16 @@ namespace AssetManagement.Api.Controllers
             _logger.LogInformation($"[{guid}] {strTag} Request : name= {request.Name}");
 
             var filePath = Path.Combine(_baseFolder, $"{guid.ToString()}.temp");
-            using (var stream = new FileStream(filePath, FileMode.Create))
+            using (var stream = new FileStream(filePath, FileMode.OpenOrCreate))
             {
                 await request.Vedio.CopyToAsync(stream);
             }
 
-            var serviceRequest = Mapper.Map<VedioAsset>(request);
-            var converter = new SimpleResulotionConverter();
+            var serviceMetadata = Mapper.Map<AssetMetadata>(request);
+            var serviceRequest = new GraphicAsset() { AssetInfo = serviceMetadata };
+            serviceRequest.SourceFilePath = filePath;
+            serviceRequest.UploadTime = DateTime.Now;
+            var converter = new SimpleResulotionConverter(_configuration, _env);
 
             var result = new ResponseBase();
 

@@ -7,9 +7,7 @@ namespace AssetManagement.Object.Assets
         public string Id { get; set; }
         public string SourceFilePath { get; set; }
         public DateTime UploadTime { get; set; }
-        public AssetMetadata AssetInfo { get; set; }
-        public string Author { get; set; }
-        public bool IsAvailable {get; set; }
+        public AssetMetadata AssetInfo { get; set; }        
     }
 
     public class AssetMetadata
@@ -20,6 +18,8 @@ namespace AssetManagement.Object.Assets
         public string Version { get; set; }
         public AssetType AssetType { get; set; }
         public string Provider { get; set; }
+        public string Author { get; set; }
+        public bool IsAvailable { get; set; }
     }
 
     public enum AssetType

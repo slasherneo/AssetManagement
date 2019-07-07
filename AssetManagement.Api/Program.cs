@@ -25,7 +25,7 @@ namespace AssetManagement.Api
              {
                  options.Limits.MaxConcurrentConnections = 100;
                  options.Limits.MaxConcurrentUpgradedConnections = 100;
-                 options.Limits.MaxRequestBodySize = 10 * 1024;               
+                 options.Limits.MaxRequestBodySize =null;               
              })
               .UseContentRoot(Directory.GetCurrentDirectory())
               .ConfigureServices(services => services.AddAutofac())

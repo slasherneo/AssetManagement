@@ -52,7 +52,7 @@ namespace AssetManagement.Repository.Repositories
             var updateVedio = context.FirstOrDefault(x => x.Id == vedio.Id);
             if (updateVedio != default(VedioAsset))
             {
-                updateVedio.IsAvailable = false;
+                updateVedio.AssetInfo.IsAvailable = false;
             }
         }
     }

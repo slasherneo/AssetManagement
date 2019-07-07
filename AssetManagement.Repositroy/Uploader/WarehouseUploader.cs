@@ -1,14 +1,24 @@
 ﻿using AssetManagement.Object.Assets;
-using System;
+using Microsoft.Extensions.Configuration;
+using System.Net.Http;
 
 namespace AssetManagement.Repository.Uploader
 {
     public class WarehouseUploader : IWarehouseUploader
     {
-        //TODO save to DW.
-        public bool Upload2Warehouse(string id, object assets,Resolution resolution)
+        private readonly HttpClient client;
+        private string _warehouseServer;
+
+        public WarehouseUploader(IHttpClientFactory client, IConfiguration configuration)
         {
-            throw new NotImplementedException();
+            this.client = client.CreateClient();
+            _warehouseServer = configuration["Warehouse:RegistryApi"];
+        }
+        //TODO save to DW.
+        public bool Upload2Warehouse(string id, string assetsPath,Resolution resolution)
+        {
+            //client.SendAsync(_warehouseServer, request);
+            return true;
         }
     }
 }

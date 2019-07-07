@@ -2,9 +2,6 @@
 using AssetManagement.Object.Assets;
 using AssetManagement.Repository.Interfaces;
 using AssetManagement.Repository.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace AssetManagement.Domain.Factories
 {
@@ -21,13 +18,12 @@ namespace AssetManagement.Domain.Factories
 
         public AssetEntityBase CreateAssets(AssetBase assetRequest)
         {
-            AssetEntityBase output = default(AssetEntityBase);
+            AssetEntityBase output = default;
 
 
             if (assetRequest is GraphicAsset graphicAssetRequest)
             {
                 output = new GraphicAssetEntity(graphicAssetRequest, _graphicAssetRepository);
-
             }
             else if (assetRequest is VedioAsset vedioAssetRequest)
             {

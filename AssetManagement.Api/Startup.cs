@@ -57,6 +57,8 @@ namespace AssetManagement.Api
                 c.IncludeXmlComments (filePath);
             });
 
+            services.AddHttpClient();
+
             var builder = new ContainerBuilder();
 
             var domain = Assembly.Load("AssetManagement.Domain");

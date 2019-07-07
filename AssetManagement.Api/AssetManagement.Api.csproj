@@ -27,4 +27,9 @@
     <ProjectReference Include="..\AssetManagement.Domain\AssetManagement.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="resoluationFolder\" />
+    <Folder Include="tempFolder\" />
+  </ItemGroup>
+
 </Project>

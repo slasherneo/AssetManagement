@@ -4,6 +4,6 @@ namespace AssetManagement.Repository.Uploader
 {
     public interface IWarehouseUploader
     {
-        bool Upload2Warehouse(string id, object assets, Resolution resolution);
+        bool Upload2Warehouse(string id, string assetsPath, Resolution resolution);
     }
 }

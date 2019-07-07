@@ -12,7 +12,6 @@ namespace AssetManagement.Api.Models
         public string Version { get; set; }
         public AssetType AssetType { get; set; }
         public string Provider { get; set; }
-        public DateTime UploadTime { get; set; }
         public string Author { get; set; }
         public bool IsAvailable { get; set; }
         public IFormFile Vedio { get; set; }

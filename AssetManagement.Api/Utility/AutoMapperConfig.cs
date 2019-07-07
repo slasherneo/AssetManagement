@@ -10,8 +10,8 @@ namespace AssetManagement.Api.Utility
         {
             Mapper.Initialize(cfg =>
             {
-                cfg.CreateMap<ReleaseVedioRequest, VedioAsset>();
-                cfg.CreateMap<ReleaseGraphicRequest, GraphicAsset>();
+                cfg.CreateMap<ReleaseVedioRequest, AssetMetadata>();
+                cfg.CreateMap<ReleaseGraphicRequest, AssetMetadata>();
                 
             }
             );
