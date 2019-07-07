@@ -1,0 +1,56 @@
+2019-07-07 09:43:14.9336 Info Message Template Auto Format enabled
+2019-07-07 09:43:15.0351 Info Loading assembly: NLog.Targets.ElasticSearch
+2019-07-07 09:43:15.0526 Info Loading assembly: NLog.Web.AspNetCore
+2019-07-07 09:43:15.2436 Info Adding target FileTarget(Name=logfile)
+2019-07-07 09:43:15.3278 Info Adding target ElasticSearchTarget(Name=ElasticSearch)
+2019-07-07 09:43:15.3931 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: ElasticSearch
+2019-07-07 09:43:15.4645 Info Found 85 configuration items
+2019-07-07 09:43:32.1992 Info Message Template Auto Format enabled
+2019-07-07 09:43:32.2178 Info Loading assembly: NLog.Targets.ElasticSearch
+2019-07-07 09:43:32.2412 Info Loading assembly: NLog.Web.AspNetCore
+2019-07-07 09:43:32.3528 Info Adding target FileTarget(Name=logfile)
+2019-07-07 09:43:32.3792 Info Adding target ElasticSearchTarget(Name=ElasticSearch)
+2019-07-07 09:43:32.4147 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: ElasticSearch
+2019-07-07 09:43:32.4578 Info Found 85 configuration items
+2019-07-07 09:44:43.0244 Info Message Template Auto Format enabled
+2019-07-07 09:44:43.0815 Info Loading assembly: NLog.Targets.ElasticSearch
+2019-07-07 09:44:43.1443 Info Loading assembly: NLog.Web.AspNetCore
+2019-07-07 09:44:43.2784 Info Adding target FileTarget(Name=logfile)
+2019-07-07 09:44:43.3227 Info Adding target ElasticSearchTarget(Name=ElasticSearch)
+2019-07-07 09:44:43.3685 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: ElasticSearch
+2019-07-07 09:44:43.4086 Info Found 85 configuration items
+2019-07-07 09:45:11.5604 Info Message Template Auto Format enabled
+2019-07-07 09:45:11.5735 Info Loading assembly: NLog.Targets.ElasticSearch
+2019-07-07 09:45:11.5735 Info Loading assembly: NLog.Web.AspNetCore
+2019-07-07 09:45:11.6782 Info Adding target FileTarget(Name=logfile)
+2019-07-07 09:45:11.7090 Info Adding target ElasticSearchTarget(Name=ElasticSearch)
+2019-07-07 09:45:11.7294 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: ElasticSearch
+2019-07-07 09:45:11.7598 Info Found 85 configuration items
+2019-07-07 09:48:24.2461 Info Message Template Auto Format enabled
+2019-07-07 09:48:24.2684 Info Loading assembly: NLog.Targets.ElasticSearch
+2019-07-07 09:48:24.2819 Info Loading assembly: NLog.Web.AspNetCore
+2019-07-07 09:48:24.4139 Info Adding target FileTarget(Name=logfile)
+2019-07-07 09:48:24.4604 Info Adding target ElasticSearchTarget(Name=ElasticSearch)
+2019-07-07 09:48:24.4816 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: ElasticSearch
+2019-07-07 09:48:24.5117 Info Found 85 configuration items
+2019-07-07 09:49:31.5146 Info Message Template Auto Format enabled
+2019-07-07 09:49:31.5920 Info Loading assembly: NLog.Targets.ElasticSearch
+2019-07-07 09:49:31.6173 Info Loading assembly: NLog.Web.AspNetCore
+2019-07-07 09:49:31.7667 Info Adding target FileTarget(Name=logfile)
+2019-07-07 09:49:31.8337 Info Adding target ElasticSearchTarget(Name=ElasticSearch)
+2019-07-07 09:49:31.8648 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: ElasticSearch
+2019-07-07 09:49:31.8990 Info Found 85 configuration items
+2019-07-07 09:52:04.9042 Info Message Template Auto Format enabled
+2019-07-07 09:52:04.9243 Info Loading assembly: NLog.Targets.ElasticSearch
+2019-07-07 09:52:04.9374 Info Loading assembly: NLog.Web.AspNetCore
+2019-07-07 09:52:05.0516 Info Adding target FileTarget(Name=logfile)
+2019-07-07 09:52:05.0981 Info Adding target ElasticSearchTarget(Name=ElasticSearch)
+2019-07-07 09:52:05.1213 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: ElasticSearch
+2019-07-07 09:52:05.1601 Info Found 85 configuration items
+2019-07-07 09:58:27.7565 Info Message Template Auto Format enabled
+2019-07-07 09:58:27.7755 Info Loading assembly: NLog.Targets.ElasticSearch
+2019-07-07 09:58:27.7755 Info Loading assembly: NLog.Web.AspNetCore
+2019-07-07 09:58:27.8732 Info Adding target FileTarget(Name=logfile)
+2019-07-07 09:58:27.9140 Info Adding target ElasticSearchTarget(Name=ElasticSearch)
+2019-07-07 09:58:27.9346 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: ElasticSearch
+2019-07-07 09:58:27.9607 Info Found 85 configuration items
