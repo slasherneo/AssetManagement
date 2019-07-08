@@ -30,10 +30,12 @@ namespace AssetManagement.Domain.Entities
             Parallel.For(0, resolutions.Count, j =>
             {
                 var newVedioPath = converter.ConvertGraphicSource(_vedioAsset.SourceFilePath, resolutions[j]);
-                VedioMap newVedioMap = new VedioMap() { Resolution = resolutions[j], VedioPath = newVedioPath };
-                vedios.Add(newVedioMap);
+                if (!string.IsNullOrEmpty(newVedioPath))
+                {
+                    VedioMap newVedioMap = new VedioMap() { Resolution = resolutions[j], VedioPath = newVedioPath };
+                    vedios.Add(newVedioMap);
+                }
             });
-
             _vedioAsset.Vedios = vedios;
         }
 

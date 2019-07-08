@@ -29,8 +29,11 @@ namespace AssetManagement.Domain.Entities
             Parallel.For(0, resolutions.Count, j =>
             {
                 var newGraphicPath =  converter.ConvertGraphicSource(_graphicAsset.SourceFilePath, resolutions[j]);
-                GraphicMap newGrapicMap = new GraphicMap() { Resolution = resolutions[j], GraphicPath = newGraphicPath };
-                graphics.Add(newGrapicMap);
+                if (!string.IsNullOrEmpty(newGraphicPath))
+                {
+                    GraphicMap newGrapicMap = new GraphicMap() { Resolution = resolutions[j], GraphicPath = newGraphicPath };
+                    graphics.Add(newGrapicMap);
+                }
             });
            
             _graphicAsset.Graphics = graphics;

@@ -18,7 +18,7 @@ namespace AssetManagement.Domain.Factories
 
         public AssetEntityBase CreateAssets(AssetBase assetRequest)
         {
-            AssetEntityBase output = default;
+            AssetEntityBase output = default(AssetEntityBase);
 
 
             if (assetRequest is GraphicAsset graphicAssetRequest)
